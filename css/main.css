@@ -1,0 +1,86 @@
+/*Global Styles*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    color: #a59797;
+    font-weight: normal;
+    font-size: 1em;
+}
+h2 {
+    color: #fff;
+    font-size: 1.2em;
+    padding-left: 20px;
+}
+/*Header Styles*/
+.brand {
+   font-weight: 300;
+   padding-left: 0;
+   align-self: flex-start;
+}
+.headerBar {
+    background-color: #7376be;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 99;
+}
+.iconBell {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-left: auto;
+    margin-bottom: -3px;
+    position: relative;
+}
+/*Alert Menu*/
+#alert {
+    background-color: #80c98f;
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 18px;
+}
+.alertMenu {
+    position: relative;
+    display: inline-block;
+    display: none;
+    background-color: #4c4b71;
+}
+
+.alertContent {
+    position: absolute;
+    left: -90px;
+    top: 40px;
+    background-color: rgb(249, 249, 249);
+    min-width: 175px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    color:  #a59797;
+    font-size: .9em;
+}
+/*Side Nav Bar Styles */
+.icons {
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+    fill: #fff;
+}
+.navbar {
+    background-color: #4c4b71;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    z-index: 98;
+}
