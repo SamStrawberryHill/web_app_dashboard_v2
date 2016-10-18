@@ -3,6 +3,7 @@ $(".closebtn").click(function() {
     $(".alert").fadeOut("slow");
     $("#notifier").fadeOut("fast");
 });
+//Traffic Widget
 var traffic = document.getElementById('trafficWidget').getContext('2d');
 var trafficChart = new Chart(traffic, {
   type: 'line',
@@ -16,6 +17,36 @@ var trafficChart = new Chart(traffic, {
       pointRadius: 6,
       pointBorderWidth: 2,
       pointBackgroundColor: '#fff'
+    }]
+  },
+});
+// Daily Traffic Widget
+var dailyTraffic = document.getElementById("dailyTrafficWidget").getContext('2d');
+var dailyTrafficChart = new Chart(dailyTraffic, {
+  type: 'bar',
+  data: {
+    labels: ['S','M','T','W','T','F','S'],
+    datasets: [{
+      data: [50,100,175,125,225,200,100],
+      backgroundColor: '#7477BF',
+      hoverBackgroundColor: '#92CCA6'
+    }]
+  }
+});
+//Mobile Users Pie Chart
+var mobileUsers = document.getElementById("mobileUsersWidget").getContext('2d');
+var mobileChart = new Chart(mobileUsers, {
+  type: 'doughnut',
+  data: {
+    labels: ['Phones','Tablets','Desktops'],
+    datasets: [{
+      backgroundColor: [
+        '#7EBEA2',
+        '#7477BF',
+        '#73b0be'
+      ],
+      data: [20,55,5],
+      borderWidth: 0,
     }]
   }
 });
