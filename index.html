@@ -6,25 +6,24 @@
         <title>Web App Dashboard</title>
         <link rel="stylesheet" href="css/normalize.css" />
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
         <link rel="stylesheet" href="css/main.css" />
     </head>
 
     <body>
 
         <div class="headerBar">
-            <h2>Your</h2><h2 class="brand">App&trade;</h2>
+            <h2>Your</h2><h2 class="tm">App&trade;</h2>
                 <img src="icons/icon-bell.svg" class="iconNotify" alt="" />
                 <div id="notifier">
-                    <div class="notify-menu">
-                      <div class="notify-menu-content">
+                    <div class="notifyMenu">
+                      <div class="notifyMenuContent">
                         <p>You have one new message.</p>
                         <p>You have graph updates.</p>
                       </div>
                     </div>
                 </div>
             <span class="pipe">&#124;</span>
-            <img src="img/me.jpg" alt="" class="user-pic"/>
+            <img src="img/me.jpg" alt="" class="userPic"/>
             <p class="user">Samantha Hill</p>
         </div>
 
@@ -32,7 +31,7 @@
 
             <nav class="navbar">
                 <a href="#dashboard-top">
-                    <svg class="icons" version="1.1" id="dashboard-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <svg class="icons" version="1.1" id="dashboardIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                         <g id="_x31_0_20_">
                         	<g>
@@ -101,17 +100,17 @@
 
             </nav>
 
-            <div id="dashboard-top" class="main-content">
+            <div id="dashboardTop" class="mainContent">
 
-                <div class="dashboard-search">
+                <div class="dashboardSearch">
 
                     <div class="box">
                         <h1>Dashboard</h1>
                     </div>
 
-                    <div class="search-box">
+                    <div class="searchBox">
                         <label for="search"></label>
-                        <input id="search" type="search" name="search-box" placeholder="Search" />
+                        <input id="search" type="search" name="searchox" placeholder="Search" />
                     </div>
                 </div>
 
@@ -120,39 +119,39 @@
                   <strong>Alert! </strong>  You have new notifications.
                 </div>
 
-                <div class="widget-container" id="traffic-widget-container">
-                    <div class="button-group">
-                        <h3 class="widget-name">Traffic</h3>
-                        <div id="chart-buttons">
-                            <a href="#" id="button-hourly">Hourly</a>
-                            <a href="#" id="button-daily">Daily</a>
-                            <a href="#" id="button-weekly" class="active">Weekly</a>
-                            <a href="#" id="button-monthly">Monthly</a>
+                <div class="widgetContainer" id="trafficWidgetContainer">
+                    <div class="buttonGroup">
+                        <h3 class="widgetName">Traffic</h3>
+                        <div id="chartButtons">
+                            <a href="#" id="buttonHourly">Hourly</a>
+                            <a href="#" id="buttonDaily">Daily</a>
+                            <a href="#" id="buttonWeekly" class="active">Weekly</a>
+                            <a href="#" id="buttonMonthly">Monthly</a>
                         </div>
                     </div>
 
-                        <canvas id="traffic-widget" width="400" height="200"></canvas>
+                        <canvas id="trafficWidget" width="400" height="200"></canvas>
                 </div>
 
-                <div class="graphs-container">
-                    <div class="widget-container" id="daily-traffic-widget-container">
-                    <h3 class="widget-name">Daily Traffic</h3>
-                        <canvas id="daily-traffic-widget" width="400" height="225"></canvas>
+                <div class="graphsContainer">
+                    <div class="widgetContainer" id="dailyTrafficWidgetContainer">
+                    <h3 class="widgetName">Daily Traffic</h3>
+                        <canvas id="dailyTrafficWidget" width="400" height="225"></canvas>
                     </div>
 
-                    <div class="widget-container widget-border" id="mobile-users-container">
-                    <h3 class="widget-name">Mobile Users</h3>
-                        <canvas id="mobile-users-widget" width="400" height="300"></canvas>
+                    <div class="widgetContainer widgetBorder" id="mobileUsersContainer">
+                    <h3 class="widgetName">Mobile Users</h3>
+                        <canvas id="mobileUsersWidget" width="400" height="300"></canvas>
                     </div>
                 </div>
 
-                <div class="widget-container" id="social-stats">
-                <h3 class="widget-name">Social Stats</h3>
+                <div class="widgetContainer" id="socialStats">
+                <h3 class="widgetName">Social Stats</h3>
 
-                    <div class="flex-social-container">
-                        <div class="social-container" id="twitter">
+                    <div class="flexSocialContainer">
+                        <div class="socialContainer" id="twitter">
                             <div class="circle">
-                                <svg class="social-icon" version="1.1" id="twitter-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                <svg class="socialIcon" version="1.1" id="twitterIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                                     <path d="M32,3.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.8,0.8,24,0,22.2,0
                                 	c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5C10.3,7.8,5.5,5.2,2.2,1.2c-0.6,1-0.9,2.1-0.9,3.3c0,2.3,1.2,4.3,2.9,5.5
@@ -161,27 +160,27 @@
                                 	c0-0.3,0-0.6,0-0.8C30,5.6,31.1,4.4,32,3.1z"/>
                                 </svg>
                             </div>
-                    <div class="social-group">
-                        <span class="social-name">Twitter</span><br />
-                        <span class="social-counter">10,345</span>
+                    <div class="socialGroup">
+                        <span class="socialName">Twitter</span><br />
+                        <span class="socialCounter">10,345</span>
                     </div>
                 </div>
 
-                    <div class="social-container" id="facebook">
+                    <div class="socialContainer" id="facebook">
                         <div class="circle">
-                            <svg class="social-icon" enable-background="new 0 0 56.693 56.693" height="56.693px" id="facebook-icon" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <svg class="socialIcon" enable-background="new 0 0 56.693 56.693" height="56.693px" id="facebook-icon" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <path d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/>
                             </svg>
                         </div>
-                        <div class="social-group">
-                            <span class="social-name">Facebook</span><br />
-                            <span class="social-counter">8,739</span>
+                        <div class="socialGroup">
+                            <span class="socialName">Facebook</span><br />
+                            <span class="socialCounter">8,739</span>
                         </div>
                     </div>
 
-                    <div class="social-container" id="google-plus">
+                    <div class="socialContainer" id="googlePlus">
                         <div class="circle">
-                            <svg class="social-icon" version="1.1" id="google-plus-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                            <svg class="socialIcon" version="1.1" id="googlePlusIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                                 <path d="M17.7,25.7c0-0.3,0-0.5-0.1-0.8c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.2-0.4-0.3-0.7c-0.2-0.2-0.3-0.4-0.4-0.6
                                 	c-0.1-0.2-0.3-0.3-0.5-0.6c-0.2-0.2-0.4-0.4-0.5-0.5c-0.1-0.1-0.3-0.3-0.6-0.5c-0.3-0.2-0.5-0.4-0.6-0.4s-0.3-0.2-0.6-0.4
                                 	c-0.3-0.2-0.5-0.4-0.6-0.4c-0.2,0-0.5,0-1,0c-0.7,0-1.4,0-2,0.1c-0.7,0.1-1.4,0.2-2.1,0.5c-0.7,0.2-1.3,0.5-1.9,0.9s-1,0.8-1.3,1.4
@@ -201,9 +200,9 @@
                             </svg>
 
                         </div>
-                        <div class="social-group">
-                            <span class="social-name">Google+</span><br />
-                            <span class="social-counter">2,530</span>
+                        <div class="socialGroup">
+                            <span class="socialName">Google+</span><br />
+                            <span class="socialCounter">2,530</span>
                         </div>
 
                     </div>
@@ -212,45 +211,45 @@
 
                 </div>
 
-                <div class="graphs-container">
-                    <div class="widget-container" id="new-member-container">
-                    <h3 class="widget-name">New Members</h3>
+                <div class="graphsContainer">
+                    <div class="widgetContainer" id="newMemberContainer">
+                    <h3 class="widgetName">New Members</h3>
 
-                        <ul id="new-member-list">
+                        <ul id="newMemberList">
                             <li class="member">
-                                <img class="member-avatar" src="img/blanche.jpg" alt="" />
-                                <div class="member-info">
-                                    <span class="member-name" id="nm-name-2">Blanche Devereaux</span>
-                                    <span class="member-email"> Blanche.Devereaux@goldengirls.com</span>
+                                <img class="memberAvatar" src="img/blanche.jpg" alt="" />
+                                <div class="memberInfo">
+                                    <span class="memberName" id="nmName2">Blanche Devereaux</span>
+                                    <span class="memberEmail"> Blanche.Devereaux@goldengirls.com</span>
                                 </div>
-                                <span class="member-date">10/31/16</span>
+                                <span class="memberDate">10/31/16</span>
                             </li>
 
                             <li class="member">
-                                <img class="member-avatar" src="img/dorothy.jpg" alt="" />
-                                <div class="member-info">
-                                    <span class="member-name">Dorothy Zbornak</span>
-                                    <span class="member-email">Dorothy.Zbornak@goldengirls.com</span>
+                                <img class="memberAvatar" src="img/dorothy.jpg" alt="" />
+                                <div class="memberInfo">
+                                    <span class="memberName">Dorothy Zbornak</span>
+                                    <span class="memberEmail">Dorothy.Zbornak@goldengirls.com</span>
                                 </div>
-                                <span class="member-date">10/31/16</span>
+                                <span class="memberDate">10/31/16</span>
                             </li>
 
                             <li class="member">
-                                <img class="member-avatar" src="img/rose.jpg" alt="" />
-                                <div class="member-info">
-                                    <span class="member-name">Rose Nylund</span>
-                                    <span class="member-email">Rose.Nylund@goldengirls.com</span>
+                                <img class="memberAvatar" src="img/rose.jpg" alt="" />
+                                <div class="memberInfo">
+                                    <span class="memberName">Rose Nylund</span>
+                                    <span class="memberEmail">Rose.Nylund@goldengirls.com</span>
                                 </div>
-                                <span class="member-date">10/31/16</span>
+                                <span class="memberDate">10/31/16</span>
                             </li>
 
                             <li class="member">
-                                <img class="member-avatar" src="img/sophia.jpg" alt="" />
-                                <div class="member-info">
-                                    <span class="member-name">Sophia Petrillo</span>
-                                    <span class="member-email">Sophia.Petrillo@goldengirls.com</span>
+                                <img class="memberAvatar" src="img/sophia.jpg" alt="" />
+                                <div class="memberInfo">
+                                    <span class="memberName">Sophia Petrillo</span>
+                                    <span class="memberEmail">Sophia.Petrillo@goldengirls.com</span>
                                 </div>
-                                <span class="member-date">10/31/16</span>
+                                <span class="memberDate">10/31/16</span>
                             </li>
 
                         </ul>
@@ -258,96 +257,96 @@
 
                     </div>
 
-                    <div class="widget-container" id="member-activity-container">
-                    <h3 class="widget-name">Recent Activity</h3>
+                    <div class="widgetContainer" id="memberActivityContainer">
+                    <h3 class="widgetName">Recent Activity</h3>
 
-                        <ul id="member-activity-list">
+                        <ul id="memberActivityList">
                             <li class="member">
-                                <img class="member-avatar" src="img/blanche.jpg" alt="" />
+                                <img class="memberAvatar" src="img/blanche.jpg" alt="" />
 
 
-                                <div class="member-info">
-                                    <span class="member-name">Blanche Devereaux<span class="member-activity"> posted YourApp's SEO Tips</span></span>
-                                    <span class="activity-time">4 hours ago</span>
+                                <div class="memberInfo">
+                                    <span class="memberName">Blanche Devereaux<span class="memberActivity"> posted YourApp's SEO Tips</span></span>
+                                    <span class="activityTime">4 hours ago</span>
                                 </div>
 
-                                <img class="activity-arrow" src="icons/next.jpg" alt="" />
+                                <img class="activityArrow" src="icons/next.jpg" alt="" />
                             </li>
 
                             <li class="member">
-                                <img class="member-avatar" src="img/dorothy.jpg" alt="" />
+                                <img class="memberAvatar" src="img/dorothy.jpg" alt="" />
 
 
-                                <div class="member-info">
-                                    <span class="member-name">Dorothy Zbornak<span class="member-activity"> commented on Facebook's changes for 2016</span></span>
-                                    <span class="activity-time">5 hours ago</span>
+                                <div class="memberInfo">
+                                    <span class="memberName">Dorothy Zbornak<span class="memberActivity"> commented on Facebook's changes for 2016</span></span>
+                                    <span class="activityTime">5 hours ago</span>
                                 </div>
 
-                                <img class="activity-arrow" src="icons/next.jpg" alt="" />
+                                <img class="activityArrow" src="icons/next.jpg" alt="" />
                             </li>
 
                             <li class="member">
-                                <img class="member-avatar" src="img/rose.jpg" alt="" />
+                                <img class="memberAvatar" src="img/rose.jpg" alt="" />
 
 
-                                <div class="member-info">
-                                    <span class="member-name">Rose Nylund<span class="member-activity"> commented on Facebook's changes for 2016</span></span>
-                                    <span class="activity-time">5 hours ago</span>
+                                <div class="memberInfo">
+                                    <span class="memberName">Rose Nylund<span class="memberActivity"> commented on Facebook's changes for 2016</span></span>
+                                    <span class="activityTime">5 hours ago</span>
                                 </div>
 
-                                <img class="activity-arrow" src="icons/next.jpg" alt="" />
+                                <img class="activityArrow" src="icons/next.jpg" alt="" />
                             </li>
                             <li class="member">
-                                <img class="member-avatar" src="img/sophia.jpg" alt="" />
+                                <img class="memberAvatar" src="img/sophia.jpg" alt="" />
 
 
-                                <div class="member-info">
-                                    <span class="member-name">Sophia Petrillo<span class="member-activity"> posted YourApp's SEO Tips</span></span>
-                                    <span class="activity-time">1 day ago</span>
+                                <div class="memberInfo">
+                                    <span class="memberName">Sophia Petrillo<span class="memberActivity"> posted YourApp's SEO Tips</span></span>
+                                    <span class="activityTime">1 day ago</span>
                                 </div>
 
-                                <img class="activity-arrow" src="icons/next.jpg" alt="" />
+                                <img class="activityArrow" src="icons/next.jpg" alt="" />
                             </li>
 
                         </ul>
                     </div>
                 </div>
 
-                <div class="graphs-container">
-                    <div class="widget-container" id="message-container">
-                    <div id="dialog-sent">
+                <div class="graphsContainer">
+                    <div class="widgetContainer" id="messageContainer">
+                    <div id="dialogSent">
                         <p>Your message has been sent!</p>
                     </div>
-                    <div id="dialog-no-sent">
+                    <div id="dialogNotSent">
                         <p>Please complete both fields.</p>
                     </div>
 
-                    <h3 class="widget-name">Message User</h3>
-                        <form id="message-form" method="get" action="index.html" name="messageForm">
-                            <input id="user-search" type="search" name="searchUser" placeholder="Search for User"  /><br />
-                            <label for="user-search"></label>
+                    <h3 class="widgetName">Message User</h3>
+                        <form id="messageForm" method="get" action="index.html" name="messageForm">
+                            <input id="userSearch" type="search" name="searchUser" placeholder="Search for User"  /><br />
+                            <label for="userSearch"></label>
                             <textarea name="message" placeholder="Message for User" ></textarea><br />
-                            <button class="send-button" type="submit">Send</button>
+                            <button class="sendButton" type="submit">Send</button>
                         </form>
 
                     </div>
 
-                   <div class="widget-container" id="settings">
-                       <h3 class="widget-name">Settings</h3>
+                   <div class="widgetContainer" id="settings">
+                       <h3 class="widgetName">Settings</h3>
                        <form method="get" action="index.html">
-                           <div class="flex-container">
+                           <div class="flexContainer">
                                <p>Send Email Notifications</p>
                                <div class="switch">
-                                 <input id="email-toggle" name="email-switch" class="cmn-toggle cmn-toggle-round" type="checkbox" value="">
-                                 <label for="email-toggle" data-on="ON" data-off="OFF"></label>
+                                 <input id="emailToggle" name="emailSwitch" class="cmnToggle cmnToggleRound" type="checkbox" value="">
+                                 <label for="emailToggle" data-on="ON" data-off="OFF"></label>
                                </div>
                            </div>
 
-                            <div class="flex-container">
+                            <div class="flexContainer">
                                 <p>Set Profile to Public</p>
                                 <div class="switch">
-                                  <input id="profile-toggle" name="profile-switch" class="cmn-toggle cmn-toggle-round" type="checkbox" value="">
-                                  <label for="profile-toggle" data-on="ON" data-off="OFF"></label>
+                                  <input id="profileToggle" name="profile-switch" class="cmnToggle cmnToggleRound" type="checkbox" value="">
+                                  <label for="profileToggle" data-on="ON" data-off="OFF"></label>
                                 </div>
                             </div>
 
@@ -386,9 +385,9 @@
                                   <option value="11.0">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
                                   <option value="12.0">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
                             </select><br />
-                            <div class="flex-container">
-                                <button class="save-button" type="submit">Save</button>
-                                <button class="cancel-button" type="submit">Cancel</button>
+                            <div class="flexContainer">
+                                <button class="saveButton" type="submit">Save</button>
+                                <button class="cancelButton" type="submit">Cancel</button>
                             </div>
                         </form>
                     </div>
@@ -398,8 +397,7 @@
 
         <script src="https://code.jquery.com/jquery-3.0.0.min.js" type="text/javascript"></script>
         <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js" type="text/javascript"></script>
-        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js" type="text/javascript"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js" type="text/javascript"></script>
         <script src="js/app.js" type="text/javascript"></script>
     </body>
 </html>
