@@ -19,7 +19,13 @@ var trafficChart = new Chart(traffic, {
       pointBackgroundColor: '#fff'
     }]
   },
+  options: {
+        legend: {
+            display: false,
+        }
+    },
 });
+
 // Daily Traffic Widget
 var dailyTraffic = document.getElementById("dailyTrafficWidget").getContext('2d');
 var dailyTrafficChart = new Chart(dailyTraffic, {
@@ -29,9 +35,14 @@ var dailyTrafficChart = new Chart(dailyTraffic, {
     datasets: [{
       data: [50,100,175,125,225,200,100],
       backgroundColor: '#7477BF',
-      hoverBackgroundColor: '#92CCA6'
+      hoverBackgroundColor: '#92CCA6',
     }]
-  }
+  },
+  options: {
+        legend: {
+            display: false,
+        }
+    }
 });
 //Mobile Users Pie Chart
 var mobileUsers = document.getElementById("mobileUsersWidget").getContext('2d');
@@ -48,8 +59,105 @@ var mobileChart = new Chart(mobileUsers, {
       data: [20,55,5],
       borderWidth: 0,
     }]
-  }
+  },
+  options: {
+        legend: {
+            position: 'right',
+            labels: {
+                boxWidth: 15
+            }
+        },
+        cutoutPercentage: 30
+    }
 });
+
+//New Members Widget
+var newMemberName = document.getElementById("newMemberList").querySelectorAll(".memberName");
+var newMemberEmail = document.getElementById("newMemberList").querySelectorAll(".memberEmail");
+var newMemberDate = document.getElementById("newMemberList").querySelectorAll("li .memberDate");
+var newMemberAvatar = document.getElementById("newMemberList").querySelectorAll("li .memberAvatar");
+var newMemberData = [
+        {"name": "Blanche Devereaux",
+          "image": "img/blanche.jpg",
+          "icon": 'icons/custom-post.svg',
+          "email": "Blanche.Devereaux@goldengirls.com",
+          "date": "10/31/16",
+          "activity": " posted YourApp's SEO Tips",
+          "activity_time": "4 hours ago"},
+        {"name": "Dorothy Zbornak",
+          "image": "img/dorothy.jpg",
+          "icon": "icons/comment.svg",
+          "email": "Dorothy.Zbornak@goldengirls.com",
+          "date": "10/31/16",
+          "activity": " commented on Facebook's changes for 2016",
+          "activity_time": "5 hours ago"},
+        {"name": "Rose Nylund",
+          "image": "img/rose.jpg",
+          "icon": "icons/comment.svg",
+          "email": "Rose.Nylund@goldengirls.com",
+          "date": "10/31/16",
+          "activity": " commented on Facebook's changes for 2016",
+          "activity_time": "5 hours ago"},
+        {"name": "Sophia Petrillo",
+          "image": "img/sophia.jpg",
+          "icon": 'icons/add-user.svg',
+          "email": "Sophia.Petrillo@goldengirls.com",
+          "date": "10/31/16",
+          "activity": " signed up as a new member!",
+          "activity_time": "1 day ago"},
+        ];
+        $.each(newMemberData, function(i, item) {
+    var fullName = newMemberData[i].name;
+        $(newMemberName).each(function() {
+            $(newMemberName[i]).text(fullName);
+        });
+    var email = newMemberData[i].email;
+        $(newMemberEmail).each(function() {
+            $(newMemberEmail[i]).text(email);
+        });
+    var date = newMemberData[i].date;
+         $(newMemberDate).each(function() {
+             $(newMemberDate[i]).text(date);
+         });
+     var avatar = newMemberData[i].image;
+        $(newMemberAvatar).each(function() {
+            $(newMemberAvatar[i]).attr('src', avatar);
+        });
+ });
+ // Member Activity Widget
+
+var activityMemberName = document.getElementById("memberActivityList").querySelectorAll("li .memberName"); //holds both name and activity
+
+var activityTime = document.getElementById("memberActivityList").querySelectorAll("li .activityTime");
+var memberAvatar = document.getElementById("memberActivityList").querySelectorAll("li .memberAvatar");
+var activityIcon = document.getElementById("memberActivityList").querySelectorAll("li .activityIcon");
+
+// Replace placeholder text with member activity data from JSON
+
+$.each(newMemberData, function(i, item) {
+    var fullName = newMemberData[i].name;
+    var activity = newMemberData[i].activity;
+        $(activityMemberName).each(function() {
+            $(activityMemberName[i]).text(fullName + " " + activity);
+        });
+
+    var time = newMemberData[i].activity_time;
+        $(activityTime).each(function() {
+            $(activityTime[i]).text(time);
+        });
+
+     var avatar = newMemberData[i].image;
+        $(memberAvatar).each(function() {
+            $(memberAvatar[i]).attr('src', avatar);
+        });
+
+    var actIcon = newMemberData[i].icon;
+        $(activityIcon).each(function() {
+            $(activityIcon[i]).attr('src', actIcon);
+        });
+
+ });
+
 
 //Validate Message Form & Modals
 function validateForm(event) {

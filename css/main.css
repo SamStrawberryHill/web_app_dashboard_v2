@@ -126,7 +126,7 @@ h2 {
     width: 25px;
     height: 25px;
     margin: 10px;
-    fill: #fff;
+    fill: white;
 }
 
 .icons .inactive {
@@ -725,7 +725,7 @@ button {
 }
 
 .widgetContainer {
-    width: 95%;
+    width: 90%;
     padding-bottom: 25px;
 }
 
@@ -744,7 +744,6 @@ button {
 }
 
 #trafficWidget {
-    height: 500px;
     margin: 0 auto;
 }
 
