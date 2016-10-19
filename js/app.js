@@ -63,11 +63,14 @@ var mobileChart = new Chart(mobileUsers, {
   options: {
         legend: {
             position: 'right',
+            bottom: 1000,
             labels: {
-                boxWidth: 15
+                boxWidth: 15,
+                fontSize: 20,
+                padding: 10,
+                fontColor: '#a59797'
             }
-        },
-        cutoutPercentage: 30
+        }
     }
 });
 
