@@ -63,7 +63,6 @@ var mobileChart = new Chart(mobileUsers, {
   options: {
         legend: {
             position: 'right',
-            bottom: 1000,
             labels: {
                 boxWidth: 15,
                 fontSize: 20,
