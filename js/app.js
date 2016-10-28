@@ -1,8 +1,9 @@
 //Close Alert on Click
 $(".closebtn").click(function() {
-    $(".alert").fadeOut("slow");
-    $("#notifier").fadeOut("fast");
+  $(".alert").fadeOut("slow");
+  $("#notifier").fadeOut("fast");
 });
+
 //Traffic Widget
 var traffic = document.getElementById('trafficWidget').getContext('2d');
 var trafficChart = new Chart(traffic, {
@@ -20,10 +21,10 @@ var trafficChart = new Chart(traffic, {
     }]
   },
   options: {
-        legend: {
-            display: false,
-        }
-    },
+    legend: {
+      display: false,
+    }
+  },
 });
 
 // Daily Traffic Widget
@@ -39,11 +40,12 @@ var dailyTrafficChart = new Chart(dailyTraffic, {
     }]
   },
   options: {
-        legend: {
-            display: false,
-        }
+    legend: {
+      display: false,
     }
+  }
 });
+
 //Mobile Users Pie Chart
 var mobileUsers = document.getElementById("mobileUsersWidget").getContext('2d');
 var mobileChart = new Chart(mobileUsers, {
@@ -61,16 +63,16 @@ var mobileChart = new Chart(mobileUsers, {
     }]
   },
   options: {
-        legend: {
-            position: 'right',
-            labels: {
-                boxWidth: 15,
-                fontSize: 20,
-                padding: 10,
-                fontColor: '#a59797'
-            }
-        }
+    legend: {
+      position: 'right',
+      labels: {
+        boxWidth: 15,
+        fontSize: 20,
+        padding: 10,
+        fontColor: '#a59797'
+      }
     }
+  }
 });
 
 //New Members Widget
@@ -79,106 +81,99 @@ var newMemberEmail = document.getElementById("newMemberList").querySelectorAll("
 var newMemberDate = document.getElementById("newMemberList").querySelectorAll("li .memberDate");
 var newMemberAvatar = document.getElementById("newMemberList").querySelectorAll("li .memberAvatar");
 var newMemberData = [
-        {"name": "Blanche Devereaux",
-          "image": "img/blanche.jpg",
-          "icon": 'icons/custom-post.svg',
-          "email": "Blanche.Devereaux@goldengirls.com",
-          "date": "10/31/16",
-          "activity": " posted YourApp's SEO Tips",
-          "activity_time": "4 hours ago"},
-        {"name": "Dorothy Zbornak",
-          "image": "img/dorothy.jpg",
-          "icon": "icons/comment.svg",
-          "email": "Dorothy.Zbornak@goldengirls.com",
-          "date": "10/31/16",
-          "activity": " commented on Facebook's changes for 2016",
-          "activity_time": "5 hours ago"},
-        {"name": "Rose Nylund",
-          "image": "img/rose.jpg",
-          "icon": "icons/comment.svg",
-          "email": "Rose.Nylund@goldengirls.com",
-          "date": "10/31/16",
-          "activity": " commented on Facebook's changes for 2016",
-          "activity_time": "5 hours ago"},
-        {"name": "Sophia Petrillo",
-          "image": "img/sophia.jpg",
-          "icon": 'icons/add-user.svg',
-          "email": "Sophia.Petrillo@goldengirls.com",
-          "date": "10/31/16",
-          "activity": " signed up as a new member!",
-          "activity_time": "1 day ago"},
-        ];
-        $.each(newMemberData, function(i, item) {
-    var fullName = newMemberData[i].name;
-        $(newMemberName).each(function() {
-            $(newMemberName[i]).text(fullName);
-        });
-    var email = newMemberData[i].email;
-        $(newMemberEmail).each(function() {
-            $(newMemberEmail[i]).text(email);
-        });
-    var date = newMemberData[i].date;
-         $(newMemberDate).each(function() {
-             $(newMemberDate[i]).text(date);
-         });
-     var avatar = newMemberData[i].image;
-        $(newMemberAvatar).each(function() {
-            $(newMemberAvatar[i]).attr('src', avatar);
-        });
- });
+  {"name": "Blanche Devereaux",
+    "image": "img/blanche.jpg",
+    "icon": 'icons/custom-post.svg',
+    "email": "Blanche.Devereaux@goldengirls.com",
+    "date": "10/31/16",
+    "activity": " posted YourApp's SEO Tips",
+    "activity_time": "4 hours ago"},
+  {"name": "Dorothy Zbornak",
+    "image": "img/dorothy.jpg",
+    "icon": "icons/comment.svg",
+    "email": "Dorothy.Zbornak@goldengirls.com",
+    "date": "10/31/16",
+    "activity": " commented on Facebook's changes for 2016",
+    "activity_time": "5 hours ago"},
+  {"name": "Rose Nylund",
+    "image": "img/rose.jpg",
+    "icon": "icons/comment.svg",
+    "email": "Rose.Nylund@goldengirls.com",
+    "date": "10/31/16",
+    "activity": " commented on Facebook's changes for 2016",
+    "activity_time": "5 hours ago"},
+  {"name": "Sophia Petrillo",
+    "image": "img/sophia.jpg",
+    "icon": 'icons/add-user.svg',
+    "email": "Sophia.Petrillo@goldengirls.com",
+    "date": "10/31/16",
+    "activity": " signed up as a new member!",
+    "activity_time": "1 day ago"},
+  ];
+    $.each(newMemberData, function(i, item) {
+var fullName = newMemberData[i].name;
+    $(newMemberName).each(function() {
+        $(newMemberName[i]).text(fullName);
+    });
+var email = newMemberData[i].email;
+    $(newMemberEmail).each(function() {
+        $(newMemberEmail[i]).text(email);
+    });
+var date = newMemberData[i].date;
+     $(newMemberDate).each(function() {
+         $(newMemberDate[i]).text(date);
+     });
+ var avatar = newMemberData[i].image;
+    $(newMemberAvatar).each(function() {
+        $(newMemberAvatar[i]).attr('src', avatar);
+    });
+});
+
  // Member Activity Widget
-
-var activityMemberName = document.getElementById("memberActivityList").querySelectorAll("li .memberName"); //holds both name and activity
-
+var activityMemberName = document.getElementById("memberActivityList").querySelectorAll("li .memberName");
 var activityTime = document.getElementById("memberActivityList").querySelectorAll("li .activityTime");
 var memberAvatar = document.getElementById("memberActivityList").querySelectorAll("li .memberAvatar");
 var activityIcon = document.getElementById("memberActivityList").querySelectorAll("li .activityIcon");
 
 // Replace placeholder text with member activity data from JSON
-
 $.each(newMemberData, function(i, item) {
-    var fullName = newMemberData[i].name;
-    var activity = newMemberData[i].activity;
-        $(activityMemberName).each(function() {
-            $(activityMemberName[i]).text(fullName + " " + activity);
-        });
-
-    var time = newMemberData[i].activity_time;
-        $(activityTime).each(function() {
-            $(activityTime[i]).text(time);
-        });
-
-     var avatar = newMemberData[i].image;
-        $(memberAvatar).each(function() {
-            $(memberAvatar[i]).attr('src', avatar);
-        });
-
-    var actIcon = newMemberData[i].icon;
-        $(activityIcon).each(function() {
-            $(activityIcon[i]).attr('src', actIcon);
-        });
-
+  var fullName = newMemberData[i].name;
+  var activity = newMemberData[i].activity;
+    $(activityMemberName).each(function() {
+      $(activityMemberName[i]).text(fullName + " " + activity);
+    });
+  var time = newMemberData[i].activity_time;
+    $(activityTime).each(function() {
+    $(activityTime[i]).text(time);
+    });
+  var avatar = newMemberData[i].image;
+    $(memberAvatar).each(function() {
+      $(memberAvatar[i]).attr('src', avatar);
+    });
+  var actIcon = newMemberData[i].icon;
+    $(activityIcon).each(function() {
+      $(activityIcon[i]).attr('src', actIcon);
+    });
  });
-
 
 //Validate Message Form & Modals
 function validateForm(event) {
-    var messageUser = document.forms["messageForm"]["searchUser"].value;
-    var messageContent = document.forms["messageForm"]["message"].value;
-    if ( messageUser === null || messageUser === "" ) { //if the user field is empty
-        $('#dialogNotSent').fadeIn('slow').delay(2000).fadeOut('slow'); //show error message
-        event.preventDefault(event); //stop page from reloading
-    } else if ( messageContent === null || messageContent === "" ) { //if the message field is empty
-        $('#dialogNotSent').fadeIn('slow').delay(2000).fadeOut('slow'); //show error message
-        event.preventDefault(event);
-    } else {
-        $('#dialogSent').fadeIn('slow').delay(2000).fadeOut('slow'); //otherwise, show sent message
-         $("input[name='searchUser']").val(""); //clears text
-         $("textarea").val(""); //clears text
-         event.preventDefault(event);
-    }
+  var messageUser = document.forms["messageForm"]["searchUser"].value;
+  var messageContent = document.forms["messageForm"]["message"].value;
+  if ( messageUser === null || messageUser === "" ) {
+    $('#dialogNotSent').fadeIn('slow').delay(2000).fadeOut('slow');
+    event.preventDefault(event);
+  } else if ( messageContent === null || messageContent === "" ) {
+      $('#dialogNotSent').fadeIn('slow').delay(2000).fadeOut('slow');
+      event.preventDefault(event);
+  } else {
+      $('#dialogSent').fadeIn('slow').delay(2000).fadeOut('slow');
+      $("input[name='searchUser']").val("");
+      $("textarea").val("");
+      event.preventDefault(event);
+  }
 }
 
 $(".sendButton").click(function(event) {
-    validateForm(event);
+  validateForm(event);
 });
