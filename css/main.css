@@ -11,8 +11,8 @@ body {
 
 h1 {
     color: #a59797;
-    font-weight: normal;
-    font-size: 1em;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 h2 {
@@ -495,7 +495,7 @@ button {
     font-weight: bold;
     float: right;
     font-size: 22px;
-    line-height: 20px;
+    line-height: 15px;
     cursor: pointer;
 }
 
