@@ -629,10 +629,6 @@ button {
 /* Large Screens */
 @media (min-width: 1024px) {
 
-.navbar {
-    width: 7.5%;
-}
-
 #search {
     margin-left: 420px;
 }
