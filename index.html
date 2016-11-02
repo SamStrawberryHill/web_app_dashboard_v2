@@ -16,6 +16,8 @@
         <div id="notifier">
           <div class="notifyMenu">
             <div class="notifyMenuContent">
+              <p>You have one new message.</p>
+              <p>You have graph updates.</p>
             </div>
           </div>
         </div>
@@ -23,7 +25,7 @@
         <img src="img/me.jpg" alt="user picture" class="userPic"/>
         <p class="user">Samantha Hill</p>
       </div>
-      <div class="navContainer">
+      <div class="container">
         <nav class="navbar">
           <a href="#dashboard-top">
             <svg class="icons" version="1.1" id="dashboardIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -90,8 +92,7 @@
               </svg>
             </a>
         </nav>
-      </div>
-      <div id="dashboardTop" class="searchSection">
+        <div id="dashboardTop" class="mainContent">
           <div class="dashboardSearch">
             <div class="box">
               <h1>Dashboard</h1>
@@ -101,12 +102,10 @@
                 <input id="search" type="search" name="searchox" placeholder="Search"/>
               </div>
           </div>
-      </div>
-      <div class="alert">
-        <span class="closebtn">&times;</span>
-        <span class="alertMessage"><strong>Alert! </strong>  You have new notifications.</span>
-      </div>
-      <div class="mainContent">
+          <div class="alert">
+            <span class="closebtn">&times;</span>
+            <strong>Alert! </strong>  You have new notifications.
+          </div>
           <div class="widgetContainer" id="trafficWidgetContainer">
             <div class="buttonGroup">
               <h3 class="widgetName">Traffic</h3>
@@ -342,7 +341,8 @@
                       </form>
                     </div>
                   </div>
-                </div>
+        </div>
+      </div>
       <script src="https://code.jquery.com/jquery-3.0.0.min.js" type="text/javascript"></script>
       <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js" type="text/javascript"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js" type="text/javascript"></script>
