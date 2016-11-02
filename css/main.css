@@ -7,12 +7,14 @@
 body {
     background-color: white;
     font-family: 'Open Sans', sans-serif;
+    /*max-width: 100%;*/
 }
 
 h1 {
     color: #a59797;
     font-weight: bold;
     font-size: 20px;
+    padding-right: 5px;
 }
 
 h2 {
@@ -81,17 +83,38 @@ h2 {
     z-index: 98;
 }
 
-.mainContent {
-    padding-top: 105px;
-    width: 100%;
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: fixed;
 }
 
 /* Search */
 
-.dashboardSearch {
-    display: flex;
-    flex-direction: row;
+/* Close Button */
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 15px;
+    cursor: pointer;
 }
+/*.searchSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap ltr;
+  padding-top: 60px;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}*/
+
+/*.dashboardSearch {
+  flex-grow: 2;
+}*/
 
 #search {
     height: 30px;
@@ -104,7 +127,7 @@ h2 {
 }
 
 .box {
-    flex: 1;
+  float: left;
     padding: 5px 0 0 20px;
 }
 
@@ -113,6 +136,8 @@ h2 {
    border-bottom: 1px solid darkgrey;
    border-left: 1px solid darkgrey;
    height: 55px;
+   max-width: 100%;
+   float: right;
 }
 
 #chartButtons {
@@ -121,6 +146,22 @@ h2 {
 
 #hourlyTraffic {
     display: none;
+}
+/* Alert */
+.alert {
+    padding: 10px;
+    background-color: #7373bf;
+    color: white;
+    margin: 20px auto 15px;
+    width: 80%;
+    font-size: .9em;
+    border-radius: 5px;
+}
+.alert:hover {
+  background-color: #92CCA6;
+}
+.alertMessage {
+  padding-left: -20px;
 }
 
 /* Icons */
@@ -247,6 +288,13 @@ h2 {
 
 .socialGroup {
     margin-left: 40px;
+}
+
+/* Main Content*/
+.mainContent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* Member Widget */
@@ -474,43 +522,19 @@ button {
     transition: all .3s ease;
 }
 
-/* Alert */
-.alert {
-    padding: 10px;
-    background-color: #7373bf;
-    color: white;
-    margin: 20px auto 15px;
-    width: 300px;
-    font-size: .9em;
-    border-radius: 5px;
-}
-.alert:hover {
-  background-color: #92CCA6;
-}
-
-/* Close Button */
-.closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 15px;
-    cursor: pointer;
-}
 
 /* Medium Size Screens */
 @media (min-width: 768px) {
-.container {
+.navContainer {
     display: flex;
     flex-direction: row;
-    min-height: 2000px;
+
     width: 100%;
 }
 
 .navbar {
     flex-direction: column;
-    width: 10%;
+    width: 5%;
     position: relative;
     justify-content: flex-start;
     align-items: center;
@@ -520,12 +544,11 @@ button {
 
 .widgetContainer {
     width: 80%;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 }
 
 .alert {
-    width: 95%;
-    margin-left: 20px;
+    width: 70%;
 }
 
 .icons {
@@ -535,10 +558,6 @@ button {
 
 #dashboardIcon {
     margin-top: 20px;
-}
-
-.mainContent {
-    padding-top: 50px;
 }
 
 .userPic {
@@ -561,8 +580,9 @@ button {
 }
 
 .searchBox {
-    height: 55px;
+    height: 30px;
     width: 80%;
+    padding-bottom: 150px;
 }
 
 #search {
@@ -630,7 +650,7 @@ button {
 @media (min-width: 1024px) {
 
 .navbar {
-    width: 7.5%;
+    flex-direction: column;
 }
 
 #search {
@@ -638,13 +658,13 @@ button {
 }
 
 .box {
-    padding-left: 30px;
-    padding-top: 10px;
+    padding-left: 100px;
+    padding-top: 100px;
 }
 
 .alert {
-    width: 98%;
-    margin-left: 8px;
+    width: 80%;
+    padding-left: 110px;
 }
 
 .iconNotify {
@@ -679,7 +699,7 @@ button {
 }
 
 .widgetContainer {
-    width: 90%;
+    /*width: 90%;*/
     padding-bottom: 25px;
 }
 
@@ -693,7 +713,7 @@ button {
 
 #socialStats {
     border-bottom: 1px solid #eee;
-    margin: 0;
+    margin-left: 50px;
     width: 100%;
 }
 
@@ -705,6 +725,14 @@ button {
 #settings {
     margin-left: 30px;
     margin-right: 30px;
+}
+
+#newMemberContainer {
+  padding-left: 50px;
+}
+
+#messageContainer {
+  padding-left: 50px;
 }
 
 #newMemberContainer,
@@ -720,7 +748,7 @@ button {
 }
 
 #dailyTrafficWidgetContainer {
-    margin-left: 30px;
+    margin-left: 70px;
 }
 
 #dailyTrafficWidget {
@@ -759,7 +787,7 @@ select {
 #mobileUsersContainer .widgetName,
 #dailyTrafficWidgetContainer .widgetName,
 #socialStats .widgetName {
-    padding-left: 30px;
+    padding-left: 50px;
 }
 
 
@@ -796,6 +824,9 @@ select {
 }
 
 }
+/*.navbar {
+    flex-direction: column;
+}*/
 
 @media (min-width: 1440px) {
 
@@ -815,6 +846,9 @@ select {
 #dialogSent,
 #dialogNotSent  {
     left: 615px;
+}
+.navbar {
+    flex-direction: column;
 }
 
 }
